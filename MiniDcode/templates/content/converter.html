@@ -1,0 +1,28 @@
+<div class="converter">
+    <h2 class="converter-title">Convertisseur</h2>
+    <form method="POST" action="{content[0]}">
+        <div class="converter-selector">
+            <select class="bsa" name="bsa">
+                <option class='bsbin' value='bsbin'>Base 2</option>
+                <option class='bsoct' value='bsoct'>Base 8</option>
+                <option class='bsdec' value='bsdec'>Base 10</option>
+                <option class='bshex' value='bshex'>Base 16</option>
+                <option class='bsasc' value='bsasc'>ASCII</option>
+            </select>
+            <button class="converter-reverse" type='button' onClick="reverse()">&#8646;</button>
+            <select class="bsb" name="bsb">
+                <option class='bsbin' value='bsbin'>Base 2</option>
+                <option class='bsoct' value='bsoct'>Base 8</option>
+                <option class='bsdec' value='bsdec'>Base 10</option>
+                <option class='bshex' value='bshex'>Base 16</option>
+                <option class='bsasc' value='bsasc'>ASCII</option>
+            </select>
+        </div>
+        <div class="converter-area">
+            <textarea name="code" id="converter-in" cols="60" rows="10" spellcheck="false" placeholder="Données à convertir..." required>{content[1]}</textarea>
+            <button type="submit" name='valid' value="ok">Convertir</button>
+            <textarea name="request" id="converter-out" cols="60" rows="10" spellcheck="false" placeholder="Résultat de la conversion..." disabled>{content[2]}</textarea>
+        </div>
+        <p class="converter-alert">{content[3]}</p>
+    </form>
+</div>
